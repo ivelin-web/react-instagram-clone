@@ -61,6 +61,8 @@ export default function Stories() {
                     return null;
                 } else if (width < 640 && index >= 5) {
                     return null;
+                } else if (width < 500 && index >= 4) {
+                    return null;
                 }
 
                 return <Story key={story.id} Avatar={Avatar} {...story} />;

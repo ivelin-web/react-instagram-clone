@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x: hidden !important;
+}
+
 @layer components {
     /* .my-container {
         @apply px-4 sm:px-10 md:px-24 lg:px-48 xl:px-56;

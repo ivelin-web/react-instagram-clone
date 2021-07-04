@@ -30,24 +30,26 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 left-0 z-50 border-bottom border-gray-300 border flex items-center justify-between my-container py-2 bg-white">
-            <img className="object-contain h-10 cursor-pointer" src={logo} alt="Logo" />
-            <div className="h-8 sm:w-40 md:w-48 lg:w-56 flex items-center space-x-1 text-gray-400 bg-gray-100 border border-solid border-gray-300 rounded-full sm:rounded-lg pl-2 pr-2 sm:pr-0">
+            <img className="object-contain h-10 cursor-pointer mr-4 sm:mr-0" src={logo} alt="Logo" />
+            <div className="h-8 sm:w-40 md:w-48 lg:w-56 flex items-center space-x-1 text-gray-400 bg-gray-100 border border-solid border-gray-300 rounded-full sm:rounded-lg pl-2 pr-2 sm:pr-0 mr-auto sm:mr-0">
                 <SearchIcon className="cursor-pointer" style={{ fontSize: "100%", fontWeight: "bold" }} />
                 <input className="border-none hidden sm:block flex-grow bg-transparent outline-none shadow-none text-xs" type="text" placeholder="Search" />
             </div>
             <div className="flex items-center text-gray-900">
-                <IconButton className="focus:outline-none h-12 w-12">
-                    <HomeIcon style={{ fontSize: 25 }} />
-                </IconButton>
-                <IconButton className="focus:outline-none h-12 w-12">
-                    <NearMeOutlinedIcon style={{ fontSize: 25 }} />
-                </IconButton>
-                <IconButton className="focus:outline-none h-12 w-12">
-                    <ExploreOutlinedIcon style={{ fontSize: 25 }} />
-                </IconButton>
-                <IconButton className="focus:outline-none h-12 w-12">
-                    <FavoriteBorderOutlinedIcon style={{ fontSize: 25 }} />
-                </IconButton>
+                <div className="hidden sm:flex items-center">
+                    <IconButton className="focus:outline-none h-12 w-12">
+                        <HomeIcon style={{ fontSize: 25 }} />
+                    </IconButton>
+                    <IconButton className="focus:outline-none h-12 w-12">
+                        <NearMeOutlinedIcon style={{ fontSize: 25 }} />
+                    </IconButton>
+                    <IconButton className="focus:outline-none h-12 w-12">
+                        <ExploreOutlinedIcon style={{ fontSize: 25 }} />
+                    </IconButton>
+                    <IconButton className="focus:outline-none h-12 w-12">
+                        <FavoriteBorderOutlinedIcon style={{ fontSize: 25 }} />
+                    </IconButton>
+                </div>
                 <IconButton onClick={handleClickMenu} className="focus:outline-none h-12 w-12">
                     <Avatar alt="Profile Avatar" src={user.photoURL} style={{ width: 25, height: 25 }} />
                 </IconButton>
